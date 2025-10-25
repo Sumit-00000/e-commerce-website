@@ -3,7 +3,7 @@ import orderModel from "../models/orderModel.js";
 import Ordermodel from "../models/orderModel.js";
 import userModel from "../models/userModel.js";
 import Stripe from 'stripe'
-import razorpay from 'razorpay'
+import Razorpay from 'razorpay'
 
 //global variable
 const currency = 'inr'
@@ -11,7 +11,7 @@ const deliveryCharge = 10
 
 //gateway initialize
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
-const razorpayInstance = new razorpay({
+const razorpayInstance = new Razorpay({
   key_id : process.env.RAZORPAY_KEY_ID, 
   key_secret: process.env.RAZORPAY_KEY_SECRET,
 })
